@@ -2097,7 +2097,7 @@ if Rails.env.production?
     config.fog_credentials = {
       # Amazon S3의 설정
       :provider              => 'AWS',
-      :region                => ENV['S3_REGION'],     # 例: 'ap-northeast-1'
+      :region                => ENV['S3_REGION'],     # 예: 'ap-northeast-1'
       :aws_access_key_id     => ENV['S3_ACCESS_KEY'],
       :aws_secret_access_key => ENV['S3_SECRET_KEY']
     }
@@ -2109,10 +2109,10 @@ end
 실제 배포환경의 메일설정과 마찬가지로, 위 코드에서는 Heroku의 환경변수 `ENV` 를 사용하여 기밀정보가 누설되지 않도록 하고 있습니다. 11.4나 12.4에서는 SendGrid의 AddOn이 이러한 환경변수를 자동적으로 설정해주었으나, 이번에는 수동으로 설정할 필요가 있습니다. `heroku config:set` 커맨드를 사용하여 다음과 같이 Heroku 상의 환경변수를 설정해주세요.
 
 ```
-$ heroku config:set S3_ACCESS_KEY="ココに先ほどメモしたAccessキーを入力"
-$ heroku config:set S3_SECRET_KEY="同様に、Secretキーを入力"
-$ heroku config:set S3_BUCKET="Bucketの名前を入力"
-$ heroku config:set S3_REGION="Regionの名前を入力"
+$ heroku config:set S3_ACCESS_KEY="앞서 메모한 Access 키"
+$ heroku config:set S3_SECRET_KEY="앞서 메모한 Secret 키"
+$ heroku config:set S3_BUCKET="Bucket 이름 입력"
+$ heroku config:set S3_REGION="지역 이름 입력"
 ```
 
 설정이 무사히 끝났다면, 지금까지의 변경을 commit하고 Deploy할 준비가 되었습니다. 단 그전에, `.gitignore` 파일에 아래와 같이 내용을 추가해봅시다. 이것으로 이미지를 저장하는 디렉토리가 Git의 대상으로부터 제외되기 때문에, application과 관계없는 이미지 파일 등은 무시할 수있도록 됩니다.

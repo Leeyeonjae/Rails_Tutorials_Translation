@@ -228,13 +228,13 @@ end
 
 | HTTP 리퀘스트 | **URL**       | **액션**  | **Named Root**         | **용도**                                    |
 | ------------- | ------------- | --------- | ---------------------- | ------------------------------------------- |
-| `GET`         | /users        | `index`   | `users_path`           | すべてのユーザーを一覧するページ            |
+| `GET`         | /users        | `index`   | `users_path`           | 모든 사용자 목록 페이지            |
 | `GET`         | /users/1      | `show`    | `user_path(user)`      | 특정 유저를 표시하는 페이지                 |
-| `GET`         | /users/new    | `new`     | `new_user_path`        | ユーザーを新規作成するページ (ユーザー登録) |
-| `POST`        | /users        | `create`  | `users_path`           | ユーザーを作成するアクション                |
+| `GET`         | /users/new    | `new`     | `new_user_path`        | 사용자를 신규 작성하는 페이지 (사용자 등록) |
+| `POST`        | /users        | `create`  | `users_path`           | 사용자를 만드는 액션                |
 | `GET`         | /users/1/edit | `edit`    | `edit_user_path(user)` | `id= 1`의 유저를 수정하는 페이지            |
 | `PATCH`       | /users/1      | `update`  | `user_path(user)`      | 특정 유저를 수정하는 액션                   |
-| `DELETE`      | /users/1      | `destroy` | `user_path(user)`      | ユーザーを削除するアクション                |
+| `DELETE`      | /users/1      | `destroy` | `user_path(user)`      | 사용자를 삭제하는 액션                |
 
 위 코드를 사용하면, 라우팅이 유효하게 됩니다. 그러나 라우팅을 하여 접속하려는 페이지가 아직 존재하지 않습니다. 이 문제를 해결하기 위해선 7.1.4에서 최소한의 프로필을 표시하는 페이지를 작성해볼 예정입니다.
 
@@ -820,7 +820,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      # 保存の成功をここで扱う。
+      # 저장 성공을 여기에서 처리한다.
     else
       render 'new'
     end
@@ -1588,7 +1588,7 @@ $ heroku run rails db:migrate
 ### 7.6.1 7장의 정리
 
 - `debug` 메소드를 사용하여 디버그 정보를 표시할 수 있습니다.
-- Sass의 mixin 기능을 사용하면, CSS의 내용을 한 꺼번에 정리하여 다른 부분에서 재이용할 수 이씃ㅂ니다.
+- Sass의 mixin 기능을 사용하면, CSS의 내용을 한 꺼번에 정리하여 다른 부분에서 재이용할 수 있습니다.
 - Rails에는 표준적인 3개의 환경을 지원하며, 각각 `개발환경 (development), 테스트환경 (test), 실제 배포환경 (production)` 이라 부릅니다.
 - 표적인 RESTful 한 URL을 통해, 유저 정보를 리소스로써 다룰 수 있습니다.
 - Gravatar를 사용하면, 유저의 프로필 영상을 간단하게 표시할 수 있습니다.

@@ -58,7 +58,7 @@ group :production do
   gem 'pg', '0.20.0'
 end
 
-# Windows環境ではtzinfo-dataというgemを含める必要があります
+# Windows 환경에서는 tzinfo-data 라고 하는 gem을 포함 시킬 필요가 있습니다.
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 ```
 
@@ -130,7 +130,7 @@ $ rails server
 본 튜로리얼에서는 앞으로도 *Sample* 어플리케이션을 사용하여 진행하기 때문에, [Bitbuck상의 레포지토리를 만들고 Push해봅시다]([https://id.atlassian.com/login?continue=https%3A%2F%2Fid.atlassian.com%2Fopenid%2Fv2%2Fop%3Fopenid.return_to%3Dhttps%3A%2F%2Fbitbucket.org%2Fsocialauth%2Fcomplete%2Fatlassianid%2F%3Fjanrain_nonce%253D2019-08-02T15%25253A24%25253A08ZopAHnd%26openid.sreg.optional%3Dfullname%2Cnickname%2Cemail%26openid.ns%3Dhttp%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%26openid.ns.sreg%3Dhttp%3A%2F%2Fopenid.net%2Fextensions%2Fsreg%2F1.1%26openid.crowdid.application%3Dbitbucket%26openid.assoc_handle%3D21506185%26openid.ns.crowdid%3Dhttps%3A%2F%2Fdeveloper.atlassian.com%2Fdisplay%2FCROWDDEV%2FCrowdID%252BOpenID%252Bextensions%2523CrowdIDOpenIDextensions-login-page-parameters%26openid.identity%3Dhttp%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select%26openid.realm%3Dhttps%3A%2F%2Fbitbucket.org%26openid.claimed_id%3Dhttp%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select%26openid.mode%3Dcheckid_setup&prompt=&application=bitbucket&tenant=&email=&errorCode=](https://id.atlassian.com/login?continue=https%3A%2F%2Fid.atlassian.com%2Fopenid%2Fv2%2Fop%3Fopenid.return_to%3Dhttps%3A%2F%2Fbitbucket.org%2Fsocialauth%2Fcomplete%2Fatlassianid%2F%3Fjanrain_nonce%3D2019-08-02T15%253A24%253A08ZopAHnd%26openid.sreg.optional%3Dfullname%2Cnickname%2Cemail%26openid.ns%3Dhttp%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%26openid.ns.sreg%3Dhttp%3A%2F%2Fopenid.net%2Fextensions%2Fsreg%2F1.1%26openid.crowdid.application%3Dbitbucket%26openid.assoc_handle%3D21506185%26openid.ns.crowdid%3Dhttps%3A%2F%2Fdeveloper.atlassian.com%2Fdisplay%2FCROWDDEV%2FCrowdID%2BOpenID%2Bextensions%23CrowdIDOpenIDextensions-login-page-parameters%26openid.identity%3Dhttp%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select%26openid.realm%3Dhttps%3A%2F%2Fbitbucket.org%26openid.claimed_id%3Dhttp%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select%26openid.mode%3Dcheckid_setup&prompt=&application=bitbucket&tenant=&email=&errorCode=)). 
 
 ```
-$ git remote add origin git@bitbucket.org:ユーザー名/sample_app.git
+$ git remote add origin git@bitbucket.org:사용자 이름/sample_app.git
 $ git push -u origin --all     # 리포지토리와 참조 대상 모두 푸시
 ```
 
