@@ -225,7 +225,7 @@ Use `bundle show [gemname]` to see where a bundled gem is installed.
 
 보시는 것과 같이, `rails` 커맨드를 실행하면 대량의 파일과 디렉토리가 생성됩니다. Web어플리케이션의 디렉토리를 어떻게 구성할지는 본래 임의(자유)입니다만, Rails와 같은 Web 프레임워크에서는 디레토리와 파일 구조는 표준화되어 있습니다. 파일/디렉토리 구조가 모두 Rails 어플리케이션에서 표준화되어진 덕분에 다른 개발자들이 쓴 Rails 코드를 쉽게 읽을 수 있습니다. 이것은 Web프레임워크를 도입하여 얻을 수 있는 큰 메리트입니다.
 
-Rails에서 사용되는 기본 파일에 대해서는 아래의 내용을 확인해주세요. 이것들의파일이나 디렉토리의 의미나 목적에 ㅐ해서는 본 튜토리얼 전체에 걸쳐 설명하겠습니다. 특히 5.2.1 이후에는 Rails 3.1이후에 탑재된 `Asset Pipeline` 의 일부인 `app/assets` 의 디렉토리에 대해 상세히 설명해드립니다. 에셋 파이프라인에 의해 CSS이나 Javascript 파일 등의 에셋을 간단하게 구성하거나 배포할 수 있습니다.
+Rails에서 사용되는 기본 파일에 대해서는 아래의 내용을 확인해주세요. 이것들의파일이나 디렉토리의 의미나 목적에 대해서는 본 튜토리얼 전체에 걸쳐 설명하겠습니다. 특히 5.2.1 이후에는 Rails 3.1이후에 탑재된 `Asset Pipeline` 의 일부인 `app/assets` 의 디렉토리에 대해 상세히 설명해드립니다. 에셋 파이프라인에 의해 CSS이나 Javascript 파일 등의 에셋을 간단하게 구성하거나 배포할 수 있습니다.
 
 ![](../image/Chapter1/directory_structure_rails_4th_edition.png)
 
@@ -322,7 +322,7 @@ group :development do
   gem ‘spring-watcher-listen’, ‘~> 2.0.0’
 end
 
-# Windows環境ではtzinfo-dataというgemを含める必要があります
+# Windows 환경에서는 tzinfo-data라는 gem을 포함해야 합니다.
 gem ‘tzinfo-data’, platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 ```
 
@@ -366,7 +366,7 @@ group :development do
   gem ‘spring-watcher-listen’, ‘2.0.1’
 end
 
-# Windows環境ではtzinfo-dataというgemを含める必要があります
+# Windows 환경에서는 tzinfo-data라는 gem을 포함해야 합니다.
 gem ‘tzinfo-data’, platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 ```
 
@@ -393,7 +393,7 @@ bundle install` 커맨드의 실행은 조금 시간이 걸릴 수도 있습니�
 
 ### 1.3.2 rails server
 
-1.3의 `rails server` 커맨드와 1.3.1 의 `bundle install` 의 커맨드를 실행하는 것으로, 실제로 동작하는 어플리케이션이 만들어졌습니다. 감사하게도 Rails는 개발 머신에서만 동작되는 로컬 Web서버를 구동시키기 위한 커맨드라인 프로그램이 있기 때문에 `rails server` 라는 커맨드를 실행시키는 것만으로도 Rails 어플리케이션을 간단하게 동작시킬 수 있습니다.
+1.3의 `rails new` 커맨드와 1.3.1 의 `bundle install` 의 커맨드를 실행하는 것으로, 실제로 동작하는 어플리케이션이 만들어졌습니다. 감사하게도 Rails는 개발 머신에서만 동작되는 로컬 Web서버를 구동시키기 위한 커맨드라인 프로그램이 있기 때문에 `rails server` 라는 커맨드를 실행시키는 것만으로도 Rails 어플리케이션을 간단하게 동작시킬 수 있습니다.
 
 ```
 $ cd ~/environment/hello_app/
@@ -780,7 +780,7 @@ group :production do
   gem ‘pg’, ‘0.20.0’
 end
 
-# Windows環境ではtzinfo-dataというgemを含める必要があります
+# Windows 환경에서는 tzinfo-data라는 gem을 포함해야 합니다.
 gem ‘tzinfo-data’, platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 ```
 

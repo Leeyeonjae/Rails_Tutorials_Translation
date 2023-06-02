@@ -83,7 +83,7 @@ class ApplicationController < ActionController::Base
 end
 ```
 
-*config.rb*
+*routes.rb*
 
 ```ruby
 Rails.application.routes.draw do
@@ -202,10 +202,10 @@ migration작업이 끝나면, 다음 커맨드로 로컬 Web서버를 실행할 
 
 | URL           | Action | Remarks                          |
 | ------------- | ------ | -------------------------------- |
-| /users        | index  | すべてのユーザーを一覧するページ |
-| /users/1      | show   | id=1のユーザーを表示するページ   |
-| /users/new    | new    | 新規ユーザーを作成するページ     |
-| /users/1/edit | edit   | id=1のユーザーを編集するページ   |
+| /users        | index  | 모든 사용자 목록 페이지          |
+| /users/1      | show   | id=1 사용자를 표시하는 페이지    |
+| /users/new    | new    | 신규 사용자를 작성하는 페이지     |
+| /users/1/edit | edit   | id=1 사용자 편집 페이지        |
 
 
 
@@ -248,8 +248,8 @@ migration작업이 끝나면, 다음 커맨드로 로컬 Web서버를 실행할 
 
 위 그림에서 설명하고 있는 순서의 개요는 아래와 같습니다.
 
- 1.  브라우저로부터 /user 라고 하는 URL의 리퀘스트를  Rails의 서버로 송신합니다.
-2. /user 리퀘스트는 Rails의 라우팅처리에 의해 Users 컨트롤러 내부의 `index` 액션에 할당됩니다.
+ 1.  브라우저로부터 /users 라고 하는 URL의 리퀘스트를  Rails의 서버로 송신합니다.
+2. /users 리퀘스트는 Rails의 라우팅처리에 의해 Users 컨트롤러 내부의 `index` 액션에 할당됩니다.
 
 3. `index` 액션이 실행되고, 거기서 User모델에게 “모든 유저를 출력해라” (`User.all`) 의 쿼리가 실행됩니다.
 
@@ -340,15 +340,15 @@ end
 
 
 
-| HTTPリクエスト | URL           | アクション | 用途                               |
+| HTTP 요청       | URL           | 액션        | 용도                               |
 | -------------- | ------------- | ---------- | ---------------------------------- |
-| GET            | users         | index      | すべてのユーザーを一覧するページ   |
-| GET            | /users/1      | show       | id=1のユーザーを表示するページ     |
-| GET            | /users/new    | new        | 新規ユーザーを作成するページ       |
-| POST           | /users        | create     | ユーザーを作成するアクション       |
-| GET            | /users/1/edit | edit       | id=1のユーザーを編集するページ     |
-| PATCH          | /users/1      | update     | id=1のユーザーを更新するアクション |
-| DELETE         | /users/1      | destroy    | id=1のユーザーを削除するアクション |
+| GET            | /users        | index      | 모든 사용자 목록 페이지           |
+| GET            | /users/1      | show       | id=1 사용자를 표시하는 페이지      |
+| GET            | /users/new    | new        | 신규 사용자를 작성하는 페이지       |
+| POST           | /users        | create     | 사용자를 만드는 액션              |
+| GET            | /users/1/edit | edit       | id=1 사용자 편집 페이지          |
+| PATCH          | /users/1      | update     | id=1 사용자 업데이트 액션         |
+| DELETE         | /users/1      | destroy    | id=1 사용자 삭제 액션            |
 
 
 
@@ -510,15 +510,15 @@ end
 
 
 
-| HTTPリクエスト | URL                | アクション | 用途                                     |
+| HTTP 요청       | URL                | 액션        | 용도                               |
 | -------------- | ------------------ | ---------- | ---------------------------------------- |
-| GET            | /microposts        | index      | すべてのマイクロポストを表示するページ   |
-| GET            | /microposts/1      | show       | id=1のマイクロポストを表示するページ     |
-| GET            | /microposts/new    | new        | マイクロポストを新規作成するページ       |
-| POST           | /microposts        | create     | マイクロポストを新規作成するアクション   |
-| GET            | /microposts/1/edit | edit       | id=1のマイクロポストを編集するページ     |
-| PATCH          | /microposts/1      | update     | id=1のマイクロポストを更新するアクション |
-| DELETE         | /microposts/1      | destroy    | id1のマイクロポストを削除する            |
+| GET            | /microposts        | index      | 모든 마이크로 포스트를 표시하는 페이지   |
+| GET            | /microposts/1      | show       | id=1의 마이크로 포스트를 표시하는 페이지     |
+| GET            | /microposts/new    | new        | 마이크로 포스트를 새로 작성하는 페이지       |
+| POST           | /microposts        | create     | 마이크로 포스트를 신규로 작성하는 액션   |
+| GET            | /microposts/1/edit | edit       | id=1의 마이크로 포스트 편집 페이지     |
+| PATCH          | /microposts/1      | update     | id=1의 마이크로 포스트를 갱신하는 액션 |
+| DELETE         | /microposts/1      | destroy    | id1의 마이크로 포스트를 삭제하다      |
 
 Microposts의 컨트롤러 자체의 구조는 아래와 같습니다. `UsersController`가 `MicropostsController` 로 바뀌어있을 뿐, 그 외에는 2.2에서 확인한 Users 컨트롤러와 같다는 것에 주목해주세요. 이것은 REST아키텍쳐가 2개의 리소스에 똑같이 적용되어있는 것을 나타내고 있습니다.
 ```ruby

@@ -131,7 +131,7 @@ $ rails server
 
 ```
 $ git remote add origin git@bitbucket.org:ユーザー名/sample_app.git
-$ git push -u origin --all     # リポジトリやその参照先もすべてプッシュする
+$ git push -u origin --all     # 리포지토리와 참조 대상 모두 푸시
 ```
 
 
