@@ -679,7 +679,7 @@ $ git commit -a -m “Improve the README file”
  1 file changed, 5 insertions(+), 22 deletions(-)
 ```
 
-`-a` 옵션은 신중하게 사용하시길 바랍니다. 커밋한 다음 새로운 파일을 추가한 경우에는, 일단 `git add` 를 실행하여 해당 파일을 Git에서 추적할 수 잇또록 해야합니다.
+`-a` 옵션은 신중하게 사용하시길 바랍니다. 커밋한 다음 새로운 파일을 추가한 경우에는, 일단 `git add` 를 실행하여 해당 파일을 Git에서 추적할 수 있도록 해야합니다.
 
 커밋메세지에는  **현재형** 이면서 **[명령형](https://en.wikipedia.org/wiki/Imperative_mood#Korean)**  으로 작성하도록 합시다. Git의 모델은, 일련 패치형태로 진행됩니다. 때문에 커밋메세지를 쓸 때에는 해당 커밋이 "무엇을 했는지” 과거형으로 작성하는것 보다 “무엇을 한다” 라는 식으로 작성하는 편이 나중에 커밋이력을 확인할 때에 알기 쉬워집니다. 게다가 현재형이면서 명령형으로 쓴다면 Git커맨드 자체에 의해 작성되는 커밋메세지와 시제가 맞아떨어집니다. 자세한 것은  [Learn Enough Git to Be Dangerous](http://learnenough.com/git-tutorial) 의 [Committing to Git](https://www.learnenough.com/git-tutorial#aside-commit_messages) 을 참고해주세요. (역자: 이것은 영어의 경우이므로 참고해주세요)
 
