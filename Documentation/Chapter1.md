@@ -28,7 +28,7 @@
 ## 1.1 처음에는
 Ruby on Rails (간단하게 「Rails」 라고 부를때도 있습니다.) 은 Ruby라고 하는 프로그래밍 언어로 쓰여진 Web 개발 Framework입니다. Ruby on Rails은 2004년에 처음 만들어진 이래로, 급속하게 성장했습니다. 현재는 동적인 Web 어플리케이션을 개발하는 Framework로써 유명하고 인기있는 프레임워크 중 하나가 되어, [Airbnb](http://airbnb.com/) 나 [Basecamp](http://basecamp.com/) , [Disney](http://disney.com/) , [GitHub](https://github.com/) , [Hulu](http://hulu.com/) , [Kickstarter](http://kickstarter.com/) , [Shopify](http://shopify.com/) , [Twitter](http://twitter.com/) , [Yellow Pages](http://yellowpages.com/) 등의 많은 기업에서 Rails가 사용되었습니다. 그 외에도 [ENTP](http://entp.com/) や [thoughtbot](http://thoughtbot.com/) , [Pivotal Labs](http://pivotallabs.com/) , [Hashrocket](http://hashrocket.com/) , [HappyFunCorp](http://www.happyfuncorp.com/) 등 Rails를 전문적으로 사용하는 회사도 많이 있습니다. 또한 Rails를 전문으로한 프리랜서 개발자들은 수없이 많습니다.
 
-Rails가 이렇게 많은 인기를 끄는 것은 왜일까요? 한 가지 이유로는 Rails가 100% 오픈소스로 이루어져 있으며 제약이 적은 [MIT 라이센스](http://www.opensource.org/licenses/mit-license.php) 로 공개되어져있기 떄문입니다. 또한 Rails는 설계가 간결하고 아름답기 때문에 Rails가 인기있는 이유일 것입니다. 이 것을 실현가능하게 한 것은 Rails를 지탱하고 있는  [Ruby](http://ruby-lang.org/)  언어의 경의로운 유연함 덕분입니다. 구체적으로는 웹 어플리케이션 개발에 특화된 [DSL (도메인 고유 언어)](http://en.wikipedia.org/wiki/Domain_Specific_Language) 를 Ruby에서 구현하고 있기 때문에, HTML이나 데이터 모델의 작성, URL의 루팅 등, 웹 프로그래밍에 필요한 많은 작업을 간단하게 할 수 있습니다.  그 결과 Rails를 사용하여 웹 개발을 하면 코드가 간결하고 읽기 쉬워집니다.
+Rails가 이렇게 많은 인기를 끄는 것은 왜일까요? 한 가지 이유로는 Rails가 100% 오픈소스로 이루어져 있으며 제약이 적은 [MIT 라이센스](http://www.opensource.org/licenses/mit-license.php) 로 공개되어져있기 때문입니다. 또한 Rails는 설계가 간결하고 아름답기 때문에 Rails가 인기있는 이유일 것입니다. 이 것을 실현가능하게 한 것은 Rails를 지탱하고 있는  [Ruby](http://ruby-lang.org/)  언어의 경의로운 유연함 덕분입니다. 구체적으로는 웹 어플리케이션 개발에 특화된 [DSL (도메인 고유 언어)](http://en.wikipedia.org/wiki/Domain_Specific_Language) 를 Ruby에서 구현하고 있기 때문에, HTML이나 데이터 모델의 작성, URL의 루팅 등, 웹 프로그래밍에 필요한 많은 작업을 간단하게 할 수 있습니다.  그 결과 Rails를 사용하여 웹 개발을 하면 코드가 간결하고 읽기 쉬워집니다.
 
 게다가 Rails는 최신의 Web 테크놀로지나 프레임워크 설계에 재빠르게 응용할 수 있습니다. 예를 들어, Rails는  「REST」 라고 하는 설계사상의 중요성을 재빠르게 받아들이고, 대응한 프레임 워크 중 하나 입니다. (REST에 대해서는 나중에 말씀드립니다.) 또한 다른 프레임워크에서 성공한 기술이 있다면, Rails의 개발자인  [David Heinemeier Hansson](http://loudthinking.com/) (DHH) 나 [Rails의 코어 팀](http://rubyonrails.org/core) 은 그러한 아이디어를 적극적으로 Rails에 적용합니다. 인상적인 예로는 이전에는 서로 라이벌 관계였던 Merb와 Rails의 통합을 예를 들 수 있습니다. 그 통합의 결과로 Rails는 Merb의 모듈설계나 안정된 API[API](http://en.wikipedia.org/wiki/Application_programming_interface) 、그리고 퍼포먼스의 향상 등 많은 혜택을 받게 되었습니다.
 
@@ -609,7 +609,7 @@ Bitbucket에서 프로젝트를 공개하는건 간단하지만 조금 기술적
 ![](../image/Chapter1/add_repository.png)
 
 마지막으로, 아래의 커맨드를 실행해주세요. 제대로 실행되지 않으면 공개키가 제대로 추가되지 않았을 수 있으니, 다시 한 번 진행해보시길 바랍니다.
-아래의 커맨드를 실행하는 것으로 로컬환경의 레포지토리를 Bitbucket으로 푸시할 수 있습니다. 푸시 할 떄에는 *Are you sure you want to continue connecting (yes/no)?* 라고 출력될 때도 있습니다만, 이때는 *yes*를 입력해주세요.
+아래의 커맨드를 실행하는 것으로 로컬환경의 레포지토리를 Bitbucket으로 푸시할 수 있습니다. 푸시 할 때에는 *Are you sure you want to continue connecting (yes/no)?* 라고 출력될 때도 있습니다만, 이때는 *yes*를 입력해주세요.
 
 ```
 $ git remote add origin git@bitbucket.org:유저이름/hello_app.git

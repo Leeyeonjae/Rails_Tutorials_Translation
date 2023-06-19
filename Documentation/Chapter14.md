@@ -1299,7 +1299,7 @@ $("#followers").html('<%= @user.followers.count %>');
 
 ### 14.2.6 Follow를 테스트해보자.
 
-Follow 버튼이 동작하게끔 되었기 떄문에, 버그를 찾아내기 위한 간단한 테스트 코드를 작성해봅시다. 유저의 follow에 대한 테스트는 /relationships 에 대해 POST Request를 보내어 Follow돈 유저가 1명 늘어난 것을 체크해봅니다. 구체적인 코드는 다음과 같습니다.
+Follow 버튼이 동작하게끔 되었기 때문에, 버그를 찾아내기 위한 간단한 테스트 코드를 작성해봅시다. 유저의 follow에 대한 테스트는 /relationships 에 대해 POST Request를 보내어 Follow돈 유저가 1명 늘어난 것을 체크해봅니다. 구체적인 코드는 다음과 같습니다.
 
 ```ruby
 assert_difference '@user.following.count', 1 do

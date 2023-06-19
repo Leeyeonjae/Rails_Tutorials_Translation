@@ -16,7 +16,7 @@
 
 
 
-account 유효화 구현할 떄와 많이 비슷합니다. PasswordResets 리소스를 생성하고, 재설정용의 토큰과 그것에 대응하는 Digest를 저장하는 것이 이번 챕터의 목적입니다. 전체적인 흐름은 다음과 같습니다.
+account 유효화 구현할 때와 많이 비슷합니다. PasswordResets 리소스를 생성하고, 재설정용의 토큰과 그것에 대응하는 Digest를 저장하는 것이 이번 챕터의 목적입니다. 전체적인 흐름은 다음과 같습니다.
 
 1. 유저가 패스워드의 재설정을 리퀘스트하면, 유저가 입력한 메일주소를 Key로하여 데이터베이스로부터 유저를 검색한다.
 2. 해당 메일주소가 데이터베이스에 존재하는 경우, 재설정용 토큰과 재설정용 Digest을 생성한다.
@@ -372,7 +372,7 @@ end
 
 ![](../image/Chapter12/password_reset_text_preview_4th_ed.png)
 
-올바른 메일 주소로 발신했을 떄의 화면은 아래와 같으며, 해당 메일은 서버 로그에서는 아래 두 번째 내용와 같습니다.
+올바른 메일 주소로 발신했을 때의 화면은 아래와 같으며, 해당 메일은 서버 로그에서는 아래 두 번째 내용와 같습니다.
 
 ![](../image/Chapter12/valid_email_password_reset.png)
 
@@ -700,7 +700,7 @@ class PasswordResetsController < ApplicationController
 end
 ```
 
-(위 코드는 [7.3.2](Chapter7.md#732-strong-parameter) 를 구현할 떄와 마찬가지로, `user_params`메소드를 사용하여 `password` 와 `password_confirmaion` 속성을 확인하고 있습니다.
+(위 코드는 [7.3.2](Chapter7.md#732-strong-parameter) 를 구현할 때와 마찬가지로, `user_params`메소드를 사용하여 `password` 와 `password_confirmaion` 속성을 확인하고 있습니다.
 
 
 
@@ -747,7 +747,7 @@ end
 
 ### 12.3.3 패스워드 재설정을 테스트해보자
 
-이번 섹션에서는, `password_resets_controller.rb` 의 2가지 (혹은 3가지)의 분기, 즉 발신에 성공했을 때와 실패했을 떄의 결합테스트 코트를 작성해볼 것 입니다. (앞서 말씀드린대로, 3번째 분기에 대해서는 연습문제로 내겠습니다.) 우선 패스워드 재설정의 테스트파일을 생성해보겠습니다.
+이번 섹션에서는, `password_resets_controller.rb` 의 2가지 (혹은 3가지)의 분기, 즉 발신에 성공했을 때와 실패했을 때의 결합테스트 코트를 작성해볼 것 입니다. (앞서 말씀드린대로, 3번째 분기에 대해서는 연습문제로 내겠습니다.) 우선 패스워드 재설정의 테스트파일을 생성해보겠습니다.
 
 ```
 $ rails generate integration_test password_resets
